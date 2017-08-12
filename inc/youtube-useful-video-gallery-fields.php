@@ -29,7 +29,7 @@ function ytuvg_video_fields_callback($post){
 					$content = get_post_meta($post->ID, 'details', true);
 					$editor = 'details';
 					$settings = array(
-						'textarea_rows' => 5
+						'textarea_rows' => 15
 					);
 
 					wp_editor($content, $editor, $settings);
