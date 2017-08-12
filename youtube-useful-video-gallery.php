@@ -28,3 +28,6 @@ if( ! defined( 'ABSPATH' ) ) exit;
 
 // Load Scripts
 require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-scripts.php');
+
+// Load Custom Post Type
+require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-cpt.php');
