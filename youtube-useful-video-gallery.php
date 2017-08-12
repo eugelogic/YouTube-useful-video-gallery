@@ -31,3 +31,9 @@ require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-scri
 
 // Load Custom Post Type
 require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-cpt.php');
+
+// Check if admin and include admin Scripts
+if (is_admin()){
+  // Load Post Fields
+  require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-fields.php');
+}
