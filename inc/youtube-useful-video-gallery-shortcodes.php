@@ -94,8 +94,11 @@ function ytuvg_list_videos($atts, $content = null){
 
 			$output .= '<div class="ytuvg-video">';
 			$output .= '<h4>' . get_the_title() . '</h4>';
-			$output .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0" allowfullscreen></iframe>';
-
+      if(get_settings('ytuvg_setting_disable_fullscreen')){
+			     $output .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0"></iframe>';
+			} else {
+			     $output .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0" allowfullscreen></iframe>';
+      }
 			$output .= '<div>'.$details.'</div>';
 			$output .= '</div><br></hr>';
 		}

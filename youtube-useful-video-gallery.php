@@ -39,4 +39,7 @@ require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-shor
 if (is_admin()){
   // Load Post Fields
   require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-fields.php');
+
+  // Load Settings
+  require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-settings.php');
 }
