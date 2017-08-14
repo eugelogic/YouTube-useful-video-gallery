@@ -48,60 +48,6 @@ function ytuvg_register_video(){
 }
 add_action('init', 'ytuvg_register_video');
 
-// Create Code Language Taxonomy
-function ytuvg_language_taxonomy(){
-  register_taxonomy(
-    'language',
-    'video',
-    array(
-      'label' => 'Languages',
-      'query_var' => true,
-      'rewrite' => array(
-        'slug' => 'language',
-        'with_front' => true
-      ),
-      'hierarchical' => true
-      )
-  );
-}
-add_action('init', 'ytuvg_language_taxonomy', 0);
-
-// Create Web Tool Taxonomy
-function ytuvg_tool_taxonomy(){
-  register_taxonomy(
-    'tool',
-    'video',
-    array(
-      'label' => 'Tools',
-      'query_var' => true,
-      'rewrite' => array(
-        'slug' => 'tool',
-        'with_front' => true
-      ),
-      'hierarchical' => true
-      )
-  );
-}
-add_action('init', 'ytuvg_tool_taxonomy', 0);
-
-// Create IT Project Taxonomy
-function ytuvg_project_taxonomy(){
-  register_taxonomy(
-    'project',
-    'video',
-    array(
-      'label' => 'Projects',
-      'query_var' => true,
-      'rewrite' => array(
-        'slug' => 'project',
-        'with_front' => true
-      ),
-      'hierarchical' => false
-      )
-  );
-}
-add_action('init', 'ytuvg_project_taxonomy', 0);
-
 register_activation_hook(__FILE__, function () {
     ytuvg_register_video();
     flush_rewrite_rules();
