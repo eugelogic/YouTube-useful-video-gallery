@@ -99,7 +99,7 @@ function ytuvg_list_videos($atts, $content = null){
 			} else {
 			     $output .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0" allowfullscreen></iframe>';
       }
-			$output .= '<div>'.$details.'</div>';
+			$output .= '<div>' . nl2br($details) . '</div>';
 			$output .= '</div><br></hr>';
 		}
 
