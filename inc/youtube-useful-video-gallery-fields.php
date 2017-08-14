@@ -59,7 +59,7 @@ function ytuvg_video_save($post_id){
 
 
 	if(isset($_POST['details'])){
-		update_post_meta($post_id, 'details', sanitize_text_field($_POST['details']));
+		update_post_meta($post_id, 'details', $_POST['details']);
 	}
 }
 add_action('save_post', 'ytuvg_video_save');
