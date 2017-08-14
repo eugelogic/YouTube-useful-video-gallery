@@ -40,7 +40,7 @@ function ytuvg_register_video(){
       'menu_position'      => null,
       'menu_icon'          => 'dashicons-format-video',
       'can_export'         => true,
-      'supports'           => array( 'title' ),
+      'supports'           => array( 'title', 'custom-fields' ),
   );
 
 	// Register Post Type
