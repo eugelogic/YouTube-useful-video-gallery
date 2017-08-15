@@ -35,6 +35,9 @@ require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-cpt.
 // Load Shortcodes
 require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-shortcodes.php');
 
+// Load Templates
+require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-tmls.php');
+
 // Check if admin and include admin Scripts
 if (is_admin()){
   // Load Post Fields
@@ -43,3 +46,5 @@ if (is_admin()){
   // Load Settings
   require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-settings.php');
 }
+
+define('YTUVG_DIR_PATH', plugin_dir_path(__FILE__));
