@@ -7,7 +7,7 @@ if ( ! function_exists('single_video_tml') ) :
 	 *
 	 */
   function single_video_tml ( $original_template ) {
-    if ( 'video' === get_post_type( get_queried_object() ) ) {
+    if ( 'video' === get_post_type( get_queried_object() ) && is_single() ) {
       return YTUVG_DIR_PATH . '/templates/single-video.php';
     } else {
       return $original_template;
