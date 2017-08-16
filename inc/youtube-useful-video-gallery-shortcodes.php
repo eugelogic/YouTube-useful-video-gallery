@@ -94,12 +94,12 @@ function ytuvg_list_videos($atts, $content = null){
 
 			$output .= '<div class="ytuvg-video">';
 			$output .= '<h4>' . get_the_title() . '</h4>';
-      if(get_settings('ytuvg_setting_disable_fullscreen')){
+      if(get_option('ytuvg_setting_disable_fullscreen')){
 			     $output .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0"></iframe>';
 			} else {
 			     $output .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0" allowfullscreen></iframe>';
       }
-			$output .= '<div>' . nl2br($details) . '</div>';
+			$output .= '<div>' . wpautop($details) . '</div>';
 			$output .= '</div><br></hr>';
 		}
 
@@ -180,7 +180,7 @@ function ytuvg_video_grid($atts, $content = null){
 			$video_id = get_post_meta($post->ID, 'video_id', true);
 
 			$output .= '<div class="ytuvg-video-grid-entry">';
-      if(get_settings('ytuvg_setting_disable_fullscreen')){
+      if(get_option('ytuvg_setting_disable_fullscreen')){
 			     $output .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0"></iframe>';
 			} else {
 			     $output .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$video_id.'" frameborder="0" allowfullscreen></iframe>';

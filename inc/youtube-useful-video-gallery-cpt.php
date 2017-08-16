@@ -72,13 +72,14 @@ if ( ! function_exists('add_custom_fields_to_video') ) :
 				}
 
 				$video_id = get_post_meta( get_the_ID(), 'video_id', true);
+        $details = get_post_meta( get_the_ID(), 'details', true);
 
 				if (get_settings('ytuvg_setting_disable_fullscreen')) {
 							 $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.esc_attr($video_id).'" frameborder="0"></iframe>';
 					} else {
 							 $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.esc_attr($video_id).'" frameborder="0" allowfullscreen></iframe>';
 					}
-	        return $video . $details . wpautop(get_post_meta( get_the_id(), 'details', true));
+	        return $video . wpautop($details);
 	    }
 
 add_filter( 'the_content', 'add_custom_fields_to_video' );

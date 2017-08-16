@@ -60,7 +60,7 @@ get_header(); ?>
 						<?php
 							// Get field values.
 							$video_id = get_post_meta( get_the_ID(), 'video_id', true);
-							// $details = get_post_meta( get_the_ID(), 'details', true);
+							$details = get_post_meta( get_the_ID(), 'details', true);
 						?>
 						<div class="ytuvg-video">
 							<?php
@@ -73,7 +73,10 @@ get_header(); ?>
 						</div><!-- ytuvg-video -->
 
 						<div>
-							<?php echo $video . wpautop(get_post_meta( get_the_id(), 'details', true)); ?>
+							<?php
+							// Show the video and the details in the browser.
+							echo $video . wpautop($details);
+							?>
 						</div>
 
 
