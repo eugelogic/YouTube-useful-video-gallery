@@ -26,6 +26,9 @@ If not, see https://www.gnu.org/licenses/gpl-3.0.html.
 /* exit if directly accessed */
 if( ! defined( 'ABSPATH' ) ) exit;
 
+// Create plugin path to be used in subfolders
+define('YTUVG_DIR_PATH', plugin_dir_path(__FILE__));
+
 // Load Scripts
 require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-scripts.php');
 
@@ -46,5 +49,3 @@ if (is_admin()){
   // Load Settings
   require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-settings.php');
 }
-
-define('YTUVG_DIR_PATH', plugin_dir_path(__FILE__));
