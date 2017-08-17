@@ -9,6 +9,8 @@
  * Text Domain: ytuvg-domain
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * @package YouTube Useful Video Gallery
  */
 
 /*
@@ -24,28 +26,29 @@ If not, see https://www.gnu.org/licenses/gpl-3.0.html.
 */
 
 /* exit if directly accessed */
-if( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) { exit;
+}
 
-// Create plugin path to be used in subfolders
-define('YTUVG_DIR_PATH', plugin_dir_path(__FILE__));
+// Create plugin path to be used in subfolders.
+define( 'YTUVG_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
-// Load Scripts
-require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-scripts.php');
+// Load Scripts.
+require_once( plugin_dir_path( __FILE__ ) . '/inc/youtube-useful-video-gallery-scripts.php' );
 
-// Load Custom Post Type
-require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-cpt.php');
+// Load Custom Post Type.
+require_once( plugin_dir_path( __FILE__ ) . '/inc/youtube-useful-video-gallery-cpt.php' );
 
-// Load Shortcodes
-require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-shortcodes.php');
+// Load Shortcodes.
+require_once( plugin_dir_path( __FILE__ ) . '/inc/youtube-useful-video-gallery-shortcodes.php' );
 
-// Load Templates
-require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-tmls.php');
+// Load Templates.
+require_once( plugin_dir_path( __FILE__ ) . '/inc/youtube-useful-video-gallery-tmls.php' );
 
-// Check if admin and include admin Scripts
-if (is_admin()){
-  // Load Post Fields
-  require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-fields.php');
+// Check if admin and include admin Scripts.
+if ( is_admin() ) {
+	// Load Post Fields.
+	require_once( plugin_dir_path( __FILE__ ) . '/inc/youtube-useful-video-gallery-fields.php' );
 
-  // Load Settings
-  require_once(plugin_dir_path(__FILE__) . '/inc/youtube-useful-video-gallery-settings.php');
+	// Load Settings.
+	require_once( plugin_dir_path( __FILE__ ) . '/inc/youtube-useful-video-gallery-settings.php' );
 }
